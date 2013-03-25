@@ -120,7 +120,7 @@ Section "${PROD_NAME} ${PROD_VER}" INSTALL
 ;  SetOutPath "$INSTDIR\legacy\omni-bot\et\gui"		;Empty Folder no need to specify
 ;  File "..\${PROD_VER}\legacy\omni-bot\et\gui\*.*"	;Empty Folder no need to specify
   SetOutPath "$INSTDIR\legacy\omni-bot\et\nav"
-;  File "..\${PROD_VER}\legacy\omni-bot\et\nav\*.*"
+  File "..\${PROD_VER}\legacy\omni-bot\et\nav\*.*"
   SetOutPath "$INSTDIR\legacy\omni-bot\et\scripts"
   File "..\${PROD_VER}\legacy\omni-bot\et\scripts\*.*"
   SetOutPath "$INSTDIR\legacy\omni-bot\et\scripts\goals"
@@ -305,13 +305,13 @@ Section -Post
   WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "HelpLink" "http://www.etlegacy.com/projects/etlegacy/boards"
   WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "${PRODUCT_WEB_SITE}"
   WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "URLUpdateInfo" "http://www.etlegacy.com/projects/etlegacy/wiki/Download"
-;  WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "Publisher" "ACTIVISION"
+;  WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "Publisher" "add publisher here"
   WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\etl.exe"
   WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "ReleaseDate" "${RELEASE_DATE}"
-;  WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "ReleaseCountry" "United States"
+;  WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "ReleaseCountry" "add country here"
   WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "Titel" "${PROD_NAME}"
-;  WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "WMGameId" "d55aba1f-3aac-4284-a92d-155c486023f0"
-;  WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "ApplicationId" "{15726059-8f31-42ee-9fb5-ed613d3f81ba}"
+;  WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "WMGameId" "add wmgameid here"
+;  WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "ApplicationId" "add application id here"
   WriteRegDWORD HKLM "${PRODUCT_UNINST_KEY}" "NoModify" 1
   WriteRegDWORD HKLM "${PRODUCT_UNINST_KEY}" "NoRepair" 1
   WriteRegStr HKLM "${PRODUCT_UNINST_KEY}" "UninstallString" '"$INSTDIR\uninstall.exe"'
@@ -361,7 +361,7 @@ Section Uninstall
   Delete "$INSTDIR\etmain\etl_server.cfg"
   Delete "$INSTDIR\etmain\legacy.cfg"
   Delete "$INSTDIR\etmain\*.pk3"
-;  Delete "$INSTDIR\etmain\video\etintro.roq" ; We have no Intro
+;  Delete "$INSTDIR\etmain\video\etlintro.roq" ; We have no Intro yet
 
   Delete "$INSTDIR\legacy\omni-bot\global_scripts\goals\*.*"
   Delete "$INSTDIR\legacy\omni-bot\global_scripts\mapgoals\*.*"
